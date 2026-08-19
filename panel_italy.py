@@ -4,10 +4,10 @@ import sqlalchemy
 import altair as alt # Librería para gráficos lindos
 
 # --- 1. CONFIGURACIÓN DEL SERVIDOR ---
-DB_USER = "braccoignaciocom_pancheriaitalyj"
-DB_PASS = "aIlELsKLzGLnDnPI"
-DB_HOST = "50.31.176.182"
-DB_NAME = "braccoignaciocom_pancheria_italy_bd"
+DB_USER = st.secrets["DB_USER"]
+DB_PASS = st.secrets["DB_PASS"]
+DB_HOST = st.secrets["DB_HOST"]
+DB_NAME = st.secrets["DB_NAME"]
 
 @st.cache_resource
 def get_connection():
